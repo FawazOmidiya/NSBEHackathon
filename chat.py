@@ -23,10 +23,22 @@ def cohere_chat_bot():
             break
 
         # Chatbot response
-        response = co.chat(message=message,
-                            preamble_override=preamble_override,
-                            stream=True,
-                            chat_history=chat_history)
+        # Chatbot response
+        response = co.chat(model="command",
+                           message=message,
+                           preamble_override=preamble_override,
+                           stream=True,
+                           chat_history=chat_history,
+                           documents=[
+                               {"title": "Emergency", "contact":"If you need emergency shelter, call 311 or Central Intake at 416-338-4766 for assistance."}, 
+                               {"title": "Toronto", "mixed": "101 Placer Ct"},
+                               {"title": "Toronto", "mixed": "1322 Bloor St W"},
+                               {"title": "shelter", "women": "1st Stop Woodlawn Residence"},
+                               {"title": "shelter",  "men": "705 Progress Ave Shelter Building E"},  
+                               {"title": "shelter", "mixed": "4117 Lawrence Ave E Scarborough ON M1E 2S2"},
+                               {"title": "shelter", "women": "67 Adelaide St E Toronto ON M5C 1K6"},
+                               {"title": "shelter", "mixed": "545 Lake Shore Blvd W Toronto ON M5V 1A3"} 
+                            ])
         
         chatbot_response = ""
         print("AI Social Worker: ", end='')
