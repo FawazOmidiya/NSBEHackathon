@@ -31,8 +31,8 @@ def cohere_chat_bot():
                            chat_history=chat_history,
                            documents=[
                                {"title": "Emergency", "contact":"If you need emergency shelter, call 311 or Central Intake at 416-338-4766 for assistance."}, 
-                               {"title": "Toronto", "mixed": "101 Placer Ct"},
-                               {"title": "Toronto", "mixed": "1322 Bloor St W"},
+                               {"title": "shelter", "mixed": "101 Placer Ct"},
+                               {"title": "shelter", "mixed": "1322 Bloor St W"},
                                {"title": "shelter", "women": "1st Stop Woodlawn Residence"},
                                {"title": "shelter",  "men": "705 Progress Ave Shelter Building E"},  
                                {"title": "shelter", "mixed": "4117 Lawrence Ave E Scarborough ON M1E 2S2"},
